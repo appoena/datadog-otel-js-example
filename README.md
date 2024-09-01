@@ -58,6 +58,6 @@ Após subir a aplicaçao e acessar algumas vezes, será possível acessar os tra
 Ao abrir um trace esse deve ser o resultado:
 ![resultado](imgs/resultado.png)
 
-Exemplo de erro:
+Exemplo de erro(erro gerado de forma randômica, acesse algumas vezes para ter um exemplo):
 
 ![resultado com erro](imgs/resultado_erro.png)
