@@ -36,7 +36,7 @@ app.get('/', (req, res) => {
       .catch(err => {
         //como configurar erro, importante para uma correta visualizaçao na ferramenta
         span.recordException(err);
-        span.setStatus({ code: SpanStatusCode.ERROR })
+        span.setStatus({ code: SpanStatusCode.ERROR, message: String(err)})
         res.send('Sorry, check your traces and try again :)') 
         res.status(500)
         span.end(); 

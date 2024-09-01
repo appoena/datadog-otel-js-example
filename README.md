@@ -21,6 +21,10 @@ export DD_API_KEY=YOUR_DATADOG_API_KEY
 docker-compose up -d --build --remove-orphans
 ```
 
+### Como acessar a aplicação
+
+No seu navegador basta acessar o endereço [http://localhost:3000](http://localhost:3000)
+
 ### Como derrubar a aplicação
 
 ```bash
@@ -46,3 +50,14 @@ A variável `DD_TRACE_OTEL_ENABLED` é obrigatória na aplicação para o corret
 Ainda na aplicação a variável `OTEL_EXPORTER_OTLP_ENDPOINT` define para onde os spans do otel serao enviados (datadog-agent)  
 
 No agent, as variáveis `DD_OTLP_CONFIG_RECEIVER_PROTOCOLS_GRPC_ENDPOINT` e `DD_OTLP_CONFIG_RECEIVER_PROTOCOLS_HTTP_ENDPOINT` são obrigatórias, elas que dizem para o agent que ele deve receber dados gerados pelas libs do otel. Nao esquecer também de expor as portas para que a aplicaçao seja capaz de enviar os spans.
+
+## Validando o funcionamento
+
+Após subir a aplicaçao e acessar algumas vezes, será possível acessar os traces em APM > Traces no Datadog, basta filtrar por `service:node-api`
+
+Ao abrir um trace esse deve ser o resultado:
+![resultado](imgs/resultado.png)
+
+Exemplo de erro:
+
+![resultado com erro](imgs/resultado_erro.png)
