@@ -105,7 +105,7 @@ Seguir os passos conforme documentação do Datadog: [Tracing Node.js Applicatio
 
 ### 5. Variaveis de ambiente da aplicação
 
-Configure o endpoint do agent que irá receber os spans e habilita o otel no tracer do Datadog:
+Configure o endpoint do agent que irá receber os spans e habilite o otel no tracer do Datadog:
 
 ```bash
 DD_TRACE_OTEL_ENABLED=true
